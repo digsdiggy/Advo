@@ -6248,3 +6248,4005 @@ line-height: 1.55;
   }
 
 }
+/* =========================================================
+   SERVICE SUB-CARDS
+   ========================================================= */
+
+.service-subcards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 9px;
+
+  margin-top: 22px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL SUB-CARD
+   ========================================================= */
+
+.service-subcard {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 10px;
+
+  min-width: 0;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(248, 250, 252, 0.94) 55%,
+      rgba(229, 233, 238, 0.92) 100%
+    );
+
+  border: 1px solid rgba(18, 32, 51, 0.08);
+
+  border-radius: var(--radius-sm);
+
+  box-shadow:
+    0 5px 16px rgba(6, 26, 47, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+/* =========================================================
+   NUMBER
+   ========================================================= */
+
+.service-subcard .subcard-icon {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue) 0%,
+      var(--blue-bright) 100%
+    );
+
+  border-radius: 7px;
+
+  font-size: 0.56rem;
+  font-weight: 800;
+
+  letter-spacing: 0.04em;
+}
+
+
+/* =========================================================
+   SUB-CARD CONTENT
+   ========================================================= */
+
+.service-subcard h4 {
+  margin: 1px 0 4px;
+
+  color: var(--navy);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.service-subcard p {
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 0.68rem;
+
+  line-height: 1.42;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+@media (hover: hover) {
+
+  .service-subcard:hover {
+    transform: translateY(-2px);
+
+    border-color:
+      rgba(22, 131, 200, 0.25);
+
+    box-shadow:
+      0 9px 22px rgba(6, 26, 47, 0.10);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .service-subcards {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .service-subcards {
+    gap: 8px;
+
+    margin-top: 18px;
+  }
+
+
+  .service-subcard {
+    gap: 9px;
+
+    padding: 11px;
+
+    border-radius: 9px;
+  }
+
+
+  .service-subcard .subcard-icon {
+    width: 25px;
+    height: 25px;
+
+    border-radius: 6px;
+
+    font-size: 0.52rem;
+  }
+
+
+  .service-subcard h4 {
+    font-size: 0.72rem;
+
+    line-height: 1.2;
+  }
+
+
+  .service-subcard p {
+    font-size: 0.66rem;
+
+    line-height: 1.4;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .service-subcards {
+    gap: 7px;
+  }
+
+
+  .service-subcard {
+    padding: 10px;
+  }
+
+
+  .service-subcard .subcard-icon {
+    width: 23px;
+    height: 23px;
+
+    font-size: 0.49rem;
+  }
+
+
+  .service-subcard h4 {
+    font-size: 0.69rem;
+  }
+
+
+  .service-subcard p {
+    font-size: 0.63rem;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .service-subcard {
+    transition: none;
+  }
+
+  .service-subcard:hover {
+    transform: none;
+  }
+
+}
+
+/* =========================================================
+   MENTAL HEALTH ACT & RIGHTS
+   ========================================================= */
+
+.mental-health-act-section {
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+
+  box-sizing: border-box;
+
+  background:
+    radial-gradient(
+      ellipse at 15% 0%,
+      rgba(39, 167, 232, 0.12) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 85% 8%,
+      rgba(255, 255, 255, 0.10) 0%,
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      var(--navy) 0%,
+      var(--navy-2) 45%,
+      var(--navy-3) 70%,
+      var(--navy) 100%
+    );
+}
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.mental-health-rights-inner {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.mental-health-rights-heading {
+  display: grid;
+ background: var(--grey-100);
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1fr);
+
+  gap: 60px;
+
+  align-items: end;
+
+  margin-bottom: 38px;
+}
+
+
+.mental-health-rights-heading h2 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.045em;
+}
+
+
+.mental-health-rights-heading h2 em {
+  color: var(--blue-bright);
+
+  font-style: normal;
+}
+
+
+.mental-health-rights-heading > p {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.78);
+
+  font-size: 0.9rem;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.rights-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   MAIN RIGHTS PANEL
+   ========================================================= */
+
+.rights-main {
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.12),
+      rgba(255, 255, 255, 0.055)
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.13);
+}
+
+
+.rights-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--blue-bright);
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  line-height: 1.3;
+
+  text-transform: uppercase;
+}
+
+
+.rights-main h3 {
+  margin: 0 0 15px;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
+}
+
+
+.rights-main > p {
+  margin: 0 0 13px;
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 0.82rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
+
+.rights-statement {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  padding: 16px 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(39, 167, 232, 0.16),
+      rgba(22, 131, 200, 0.08)
+    );
+
+  border-left:
+    3px solid var(--blue-bright);
+
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+
+.rights-quote {
+  color: var(--blue-bright);
+
+  font-family: Georgia, serif;
+
+  font-size: 2rem;
+
+  line-height: 0.7;
+}
+
+
+.rights-statement p {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RIGHTS SUB-CARDS
+   ========================================================= */
+
+.rights-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+.rights-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--white) 0%,
+      var(--grey-50) 55%,
+      var(--grey-100) 100%
+    );
+
+  color: var(--ink);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.75);
+
+  border-radius: var(--radius-sm);
+
+  box-shadow:
+    var(--shadow-sm);
+}
+
+
+.rights-card-number {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue-bright)
+    );
+
+  border-radius: 7px;
+
+  font-size: 0.55rem;
+
+  font-weight: 800;
+}
+
+
+.rights-card h4 {
+  margin: 1px 0 5px;
+
+  color: var(--navy);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.76rem;
+
+  line-height: 1.2;
+}
+
+
+.rights-card p {
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 0.68rem;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.rights-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 22px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.13);
+}
+
+
+.rights-footer p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.62);
+
+  font-size: 0.7rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .mental-health-rights-heading {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .rights-content {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .mental-health-rights-section {
+    padding: 38px 14px;
+  }
+
+
+  .mental-health-rights-heading {
+    margin-bottom: 24px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.35rem;
+  }
+
+
+  .mental-health-rights-heading > p {
+    font-size: 0.78rem;
+
+    line-height: 1.55;
+  }
+
+
+  .rights-main {
+    padding: 20px;
+
+    border-radius: 14px;
+  }
+
+
+  .rights-label {
+    margin-bottom: 13px;
+
+    font-size: 0.57rem;
+  }
+
+
+  .rights-main h3 {
+    font-size: 1.3rem;
+  }
+
+
+  .rights-main > p {
+    font-size: 0.76rem;
+
+    line-height: 1.52;
+  }
+
+
+  .rights-statement {
+    margin-top: 17px;
+
+    padding: 13px;
+  }
+
+
+  .rights-cards {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .rights-card {
+    padding: 13px;
+  }
+
+
+  .rights-card p {
+    font-size: 0.66rem;
+  }
+
+
+  .rights-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-top: 18px;
+  }
+
+
+  .rights-footer p {
+    font-size: 0.66rem;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .mental-health-rights-section {
+    padding: 32px 10px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.1rem;
+  }
+
+
+  .rights-main {
+    padding: 17px;
+  }
+
+
+  .rights-card {
+    padding: 11px;
+  }
+
+}
+/* =========================================================
+   MENTAL HEALTH ACT & RIGHTS
+   ========================================================= */
+
+.mental-health-act-section {
+  position: relative;
+
+  width: 100%;
+  max-width: none;
+  margin-left: 0;
+  margin-right: 0;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  /*
+    Slightly dark grey base with a soft blue/grey glow.
+    Much softer than the original navy background.
+  */
+  background:
+    radial-gradient(
+      ellipse 70% 55% at 8% 0%,
+      rgba(39, 167, 232, 0.14) 0%,
+      rgba(39, 167, 232, 0.055) 32%,
+      transparent 68%
+    ),
+    radial-gradient(
+      ellipse 55% 50% at 92% 5%,
+      rgba(255, 255, 255, 0.09) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 70% 60% at 50% 100%,
+      rgba(22, 131, 200, 0.08) 0%,
+      transparent 70%
+    ),
+    linear-gradient(
+      135deg,
+      #20262d 0%,
+      #252c34 28%,
+      #2b333c 52%,
+      #252d35 76%,
+      #1d242b 100%
+    );
+}
+
+
+/* =========================================================
+   OPTIONAL SOFT LIGHT EFFECT
+   ========================================================= */
+
+.mental-health-act-section::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.025) 45%,
+      transparent 70%
+    );
+
+  opacity: 0.8;
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.mental-health-rights-inner {
+  position: relative;
+
+  z-index: 1;
+
+  width: 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HEADING
+   ========================================================= */
+
+.mental-health-rights-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1fr);
+
+  gap: 60px;
+
+  align-items: end;
+
+  margin-bottom: 38px;
+}
+
+
+.mental-health-rights-heading h2 {
+  margin: 0;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(2.4rem, 5vw, 4rem);
+
+  line-height: 0.94;
+
+  letter-spacing: -0.045em;
+}
+
+
+.mental-health-rights-heading h2 em {
+  color: var(--blue-bright);
+
+  font-style: normal;
+}
+
+
+.mental-health-rights-heading > p {
+  max-width: 590px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.76);
+
+  font-size: 0.9rem;
+
+  line-height: 1.65;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.rights-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  gap: 22px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   MAIN RIGHTS PANEL
+   ========================================================= */
+
+.rights-main {
+  position: relative;
+
+  padding: 28px;
+
+  box-sizing: border-box;
+
+  /*
+    Slight glass effect against the dark grey background.
+  */
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.075) 45%,
+      rgba(255, 255, 255, 0.045) 100%
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.14);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    0 18px 45px rgba(0, 0, 0, 0.20),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.rights-label {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  color: var(--blue-bright);
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+
+  line-height: 1.3;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN TEXT
+   ========================================================= */
+
+.rights-main h3 {
+  margin: 0 0 15px;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(1.35rem, 2.5vw, 2rem);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.025em;
+}
+
+
+.rights-main > p {
+  margin: 0 0 13px;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 0.82rem;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
+
+.rights-statement {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  margin-top: 22px;
+
+  padding: 16px 17px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(39, 167, 232, 0.17),
+      rgba(22, 131, 200, 0.075)
+    );
+
+  border-left:
+    3px solid var(--blue-bright);
+
+  border-radius:
+    0 var(--radius-sm) var(--radius-sm) 0;
+
+  box-shadow:
+    inset 0 0 25px rgba(39, 167, 232, 0.035);
+}
+
+
+.rights-quote {
+  color: var(--blue-bright);
+
+  font-family: Georgia, serif;
+
+  font-size: 2rem;
+
+  line-height: 0.7;
+}
+
+
+.rights-statement p {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size: 0.78rem;
+
+  font-weight: 600;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   RIGHTS SUB-CARDS
+   ========================================================= */
+
+.rights-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   LIGHT GREY CARDS
+   ========================================================= */
+
+.rights-card {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 11px;
+
+  padding: 17px;
+
+  box-sizing: border-box;
+
+  /*
+    Uses your supplied grey gradient.
+    The darker end gives the cards more depth.
+  */
+  background:
+    var(--gradient-grey);
+
+  color: var(--ink);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.68);
+
+  border-radius: var(--radius-sm);
+
+  box-shadow:
+    var(--shadow-sm);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+
+.rights-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(6, 26, 47, 0.15);
+
+  border-color:
+    rgba(39, 167, 232, 0.25);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.rights-card-number {
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 27px;
+  height: 27px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue),
+      var(--blue-bright)
+    );
+
+  border-radius: 7px;
+
+  font-size: 0.55rem;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 5px 14px rgba(22, 131, 200, 0.22);
+}
+
+
+/* =========================================================
+   CARD TEXT
+   ========================================================= */
+
+.rights-card h4 {
+  margin: 1px 0 5px;
+
+  color: var(--navy);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.76rem;
+
+  line-height: 1.2;
+}
+
+
+.rights-card p {
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 0.68rem;
+
+  line-height: 1.45;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.rights-footer {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 22px;
+
+  padding-top: 20px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.13);
+}
+
+
+.rights-footer p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.60);
+
+  font-size: 0.7rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 850px) {
+
+  .mental-health-rights-heading {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .rights-content {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  /* Fixed selector */
+  .mental-health-act-section {
+    padding: 38px 14px;
+  }
+
+
+  .mental-health-rights-heading {
+    margin-bottom: 24px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.35rem;
+  }
+
+
+  .mental-health-rights-heading > p {
+    font-size: 0.78rem;
+
+    line-height: 1.55;
+  }
+
+
+  .rights-main {
+    padding: 20px;
+
+    border-radius: 14px;
+  }
+
+
+  .rights-label {
+    margin-bottom: 13px;
+
+    font-size: 0.57rem;
+  }
+
+
+  .rights-main h3 {
+    font-size: 1.3rem;
+  }
+
+
+  .rights-main > p {
+    font-size: 0.76rem;
+
+    line-height: 1.52;
+  }
+
+
+  .rights-statement {
+    margin-top: 17px;
+
+    padding: 13px;
+  }
+
+
+  .rights-cards {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .rights-card {
+    padding: 13px;
+  }
+
+
+  .rights-card p {
+    font-size: 0.66rem;
+  }
+
+
+  .rights-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-top: 18px;
+  }
+
+
+  .rights-footer p {
+    font-size: 0.66rem;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .mental-health-act-section {
+    padding: 32px 10px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.1rem;
+  }
+
+
+  .rights-main {
+    padding: 17px;
+  }
+
+
+  .rights-card {
+    padding: 11px;
+  }
+
+}
+
+/* =========================================================
+   SECTION HEADING — WHITE BACKGROUND
+   ========================================================= */
+
+.mental-health-rights-heading {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1fr);
+
+  gap: 70px;
+
+  align-items: end;
+
+  margin-bottom: 42px;
+
+  /*
+    White heading area
+  */
+  background: #ffffff;
+
+  padding: 42px;
+
+  border-radius: var(--radius-lg);
+
+  box-shadow:
+    0 12px 35px rgba(6, 26, 47, 0.07);
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.mental-health-rights-heading .eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 17px;
+
+  color: var(--blue);
+
+  font-size: 0.65rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.mental-health-rights-heading .eyebrow::before {
+  content: "";
+
+  width: 25px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      rgba(39, 167, 232, 0.25)
+    );
+
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   MAIN HEADING
+   ========================================================= */
+
+.mental-health-rights-heading h2 {
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(2.6rem, 5vw, 4.4rem);
+
+  font-weight: 700;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+}
+
+
+/* =========================================================
+   BLUE ACCENT
+   ========================================================= */
+
+.mental-health-rights-heading h2 em {
+  display: inline-block;
+
+  color: var(--blue);
+
+  font-style: normal;
+
+  text-shadow:
+    0 4px 18px rgba(39, 167, 232, 0.12);
+}
+
+
+/* =========================================================
+   INTRO DESCRIPTION
+   ========================================================= */
+
+.mental-health-rights-heading > p {
+  max-width: 600px;
+
+  margin: 0 0 2px;
+
+  color: var(--ink-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .mental-health-rights-heading {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 32px;
+
+    margin-bottom: 32px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .mental-health-rights-heading {
+    gap: 19px;
+
+    padding: 25px 20px;
+
+    margin-bottom: 25px;
+
+    border-radius: 15px;
+  }
+
+
+  .mental-health-rights-heading .eyebrow {
+    margin-bottom: 14px;
+
+    font-size: 0.58rem;
+  }
+
+
+  .mental-health-rights-heading .eyebrow::before {
+    width: 20px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.45rem;
+
+    line-height: 0.96;
+  }
+
+
+  .mental-health-rights-heading > p {
+    font-size: 0.76rem;
+
+    line-height: 1.62;
+  }
+
+}
+
+
+@media (max-width: 380px) {
+
+  .mental-health-rights-heading {
+    padding: 21px 17px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.15rem;
+  }
+
+}
+/* =========================================================
+   RIGHTS CARDS
+   ========================================================= */
+
+.rights-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 12px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL CARD
+   ========================================================= */
+
+.rights-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  padding: 20px;
+
+  box-sizing: border-box;
+
+  /*
+    Slightly dark grey card.
+    Keeps enough contrast against the section background.
+  */
+  background:
+    linear-gradient(
+      145deg,
+      #343d47 0%,
+      #303943 45%,
+      #29323b 100%
+    );
+
+  color: var(--white);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: var(--radius-sm);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.045);
+
+  overflow: hidden;
+
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease,
+    background 220ms ease;
+}
+
+
+/* =========================================================
+   SUBTLE CARD LIGHT
+   ========================================================= */
+
+.rights-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -70px;
+  right: -70px;
+
+  width: 150px;
+  height: 150px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.12) 0%,
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   LEFT ACCENT
+   ========================================================= */
+
+.rights-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 18px;
+  bottom: 18px;
+  left: 0;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      rgba(39, 167, 232, 0.55),
+      transparent
+    );
+
+  opacity: 0.65;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.rights-card:hover {
+  transform: translateY(-4px);
+
+  background:
+    linear-gradient(
+      145deg,
+      #3a4651 0%,
+      #333e49 48%,
+      #2d3741 100%
+    );
+
+  border-color:
+    rgba(39, 167, 232, 0.28);
+
+  box-shadow:
+    0 16px 38px rgba(0, 0, 0, 0.24),
+    0 0 25px rgba(39, 167, 232, 0.045),
+    inset 0 1px 0 rgba(255, 255, 255, 0.055);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.rights-card-number {
+  position: relative;
+  z-index: 1;
+
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 31px;
+  height: 31px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      #116fae 0%,
+      var(--blue) 48%,
+      var(--blue-bright) 100%
+    );
+
+  border-radius: 8px;
+
+  font-size: 0.55rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.02em;
+
+  box-shadow:
+    0 6px 16px rgba(22, 131, 200, 0.30);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.rights-card > div {
+  position: relative;
+  z-index: 1;
+}
+
+
+.rights-card h4 {
+  margin: 1px 0 6px;
+
+  color: #ffffff;
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.79rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.01em;
+}
+
+
+.rights-card p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.66);
+
+  font-size: 0.68rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .rights-cards {
+    grid-template-columns: 1fr;
+
+    gap: 9px;
+  }
+
+
+  .rights-card {
+    padding: 15px;
+
+    border-radius: 10px;
+  }
+
+
+  .rights-card-number {
+    width: 29px;
+    height: 29px;
+  }
+
+
+  .rights-card h4 {
+    font-size: 0.76rem;
+  }
+
+
+  .rights-card p {
+    font-size: 0.65rem;
+
+    line-height: 1.5;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rights-card {
+    transition: none;
+  }
+
+}
+/* =========================================================
+   MENTAL HEALTH ACT & RIGHTS
+   Uses ONLY colours from your existing :root
+   ========================================================= */
+
+.mental-health-rights-section {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  padding: 90px 32px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  /*
+    Main section background.
+    Built entirely from existing root colours.
+  */
+  background:
+    radial-gradient(
+      ellipse at 8% 0%,
+      rgba(39, 167, 232, 0.14) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 92% 12%,
+      rgba(255, 255, 255, 0.07) 0%,
+      transparent 34%
+    ),
+    linear-gradient(
+      135deg,
+      var(--navy) 0%,
+      var(--navy-2) 48%,
+      var(--navy-3) 72%,
+      var(--navy) 100%
+    );
+}
+
+
+/* =========================================================
+   SOFT BACKGROUND LIGHT
+   ========================================================= */
+
+.mental-health-rights-section::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  width: 520px;
+  height: 520px;
+
+  top: -280px;
+  left: -180px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.14) 0%,
+      transparent 68%
+    );
+
+  filter: blur(15px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   INNER
+   ========================================================= */
+
+.mental-health-rights-inner {
+  position: relative;
+
+  width: 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   INTRO CARD
+   =========================================================
+
+   Contains:
+
+   Mental Health Act
+   & advocacy.
+
+   + introductory paragraph
+   ========================================================= */
+
+.mental-health-rights-heading {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1fr);
+
+  gap: 65px;
+
+  align-items: center;
+
+  margin-bottom: 22px;
+
+  padding: 40px 42px;
+
+  box-sizing: border-box;
+
+  /*
+    Your existing grey gradient.
+    This creates the clean light card.
+  */
+  background:
+    var(--gradient-grey);
+
+  border:
+    var(--border);
+
+  border-radius: var(--radius-lg);
+
+  box-shadow:
+    var(--shadow-md);
+
+  overflow: hidden;
+}
+
+
+/*
+  Subtle blue glow inside the intro card.
+*/
+.mental-health-rights-heading::after {
+  content: "";
+
+  position: absolute;
+
+  width: 280px;
+  height: 280px;
+
+  right: -150px;
+  top: -170px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.10) 0%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   EYEBROW
+   ========================================================= */
+
+.mental-health-rights-heading .eyebrow {
+  position: relative;
+  z-index: 1;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 16px;
+
+  color: var(--blue);
+
+  font-size: 0.63rem;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.mental-health-rights-heading .eyebrow::before {
+  content: "";
+
+  width: 25px;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--blue-bright)
+    );
+
+  border-radius: 999px;
+}
+
+
+/* =========================================================
+   INTRO HEADING
+   ========================================================= */
+
+.mental-health-rights-heading h2 {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: var(--navy);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(2.6rem, 5vw, 4.35rem);
+
+  font-weight: 700;
+
+  line-height: 0.94;
+
+  letter-spacing: -0.055em;
+}
+
+
+.mental-health-rights-heading h2 em {
+  display: inline-block;
+
+  color: var(--blue);
+
+  font-style: normal;
+}
+
+
+/* =========================================================
+   INTRO PARAGRAPH
+   ========================================================= */
+
+.mental-health-rights-heading > p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 590px;
+
+  margin: 0;
+
+  color: var(--ink-soft);
+
+  font-size: 0.86rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.rights-content {
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 1.05fr)
+    minmax(0, 0.95fr);
+
+  gap: 14px;
+
+  align-items: stretch;
+}
+
+
+/* =========================================================
+   MAIN ACT CARD
+   =========================================================
+
+   Contains:
+
+   Mental Health (Care and Treatment)
+   (Scotland) Act 2003
+
+   + main content
+   ========================================================= */
+
+.rights-main {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100%;
+
+  padding: 32px;
+
+  box-sizing: border-box;
+
+  /*
+    Uses your existing blue gradient.
+  */
+  background:
+    var(--gradient-blue);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    var(--shadow-lg);
+
+  overflow: hidden;
+}
+
+
+/*
+  Large atmospheric blue highlight.
+*/
+.rights-main::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  top: -210px;
+  right: -130px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.22) 0%,
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/*
+  Subtle white reflection.
+*/
+.rights-main::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 12%;
+
+  width: 45%;
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   ACT LABEL
+   ========================================================= */
+
+.rights-label {
+  position: relative;
+  z-index: 1;
+
+  display: inline-block;
+
+  margin-bottom: 19px;
+
+  color: var(--blue-soft);
+
+  font-size: 0.59rem;
+
+  font-weight: 800;
+
+  line-height: 1.45;
+
+  letter-spacing: 0.10em;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================================
+   MAIN ACT HEADING
+   ========================================================= */
+
+.rights-main h3 {
+  position: relative;
+  z-index: 1;
+
+  max-width: 650px;
+
+  margin: 0 0 17px;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(1.5rem, 2.7vw, 2.1rem);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   MAIN ACT TEXT
+   ========================================================= */
+
+.rights-main > p {
+  position: relative;
+  z-index: 1;
+
+  max-width: 680px;
+
+  margin: 0 0 13px;
+
+  color: rgba(255, 255, 255, 0.74);
+
+  font-size: 0.79rem;
+
+  line-height: 1.68;
+}
+
+
+/* =========================================================
+   STATEMENT
+   ========================================================= */
+
+.rights-statement {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 13px;
+
+  margin-top: auto;
+  padding: 17px 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(39, 167, 232, 0.18),
+      rgba(10, 41, 71, 0.28)
+    );
+
+  border:
+    1px solid rgba(39, 167, 232, 0.20);
+
+  border-left:
+    3px solid var(--blue-bright);
+
+  border-radius:
+    0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+
+.rights-quote {
+  flex: 0 0 auto;
+
+  color: var(--blue-bright);
+
+  font-family: Georgia, serif;
+
+  font-size: 2.1rem;
+
+  line-height: 0.7;
+}
+
+
+.rights-statement p {
+  margin: 0;
+
+  color: var(--white);
+
+  font-size: 0.75rem;
+
+  font-weight: 600;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   RIGHTS CARDS
+   ========================================================= */
+
+.rights-cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 10px;
+}
+
+
+/* =========================================================
+   INDIVIDUAL RIGHT CARD
+   ========================================================= */
+
+.rights-card {
+  position: relative;
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 19px;
+
+  box-sizing: border-box;
+
+  /*
+    Dark slate using ONLY your root colours.
+  */
+  background:
+    linear-gradient(
+      145deg,
+      var(--grey-700) 0%,
+      var(--navy-2) 100%
+    );
+
+  color: var(--white);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: var(--radius-sm);
+
+  box-shadow:
+    var(--shadow-sm);
+
+  overflow: hidden;
+
+  transition:
+    transform 200ms ease,
+    border-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+
+/* =========================================================
+   CARD BLUE GLOW
+   ========================================================= */
+
+.rights-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  right: -65px;
+  top: -65px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.14),
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   CARD LEFT ACCENT
+   ========================================================= */
+
+.rights-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+
+  width: 2px;
+
+  background:
+    linear-gradient(
+      180deg,
+      transparent,
+      var(--blue-bright),
+      transparent
+    );
+
+  opacity: 0.55;
+}
+
+
+/* =========================================================
+   CARD HOVER
+   ========================================================= */
+
+.rights-card:hover {
+  transform: translateY(-3px);
+
+  border-color:
+    rgba(39, 167, 232, 0.28);
+
+  box-shadow:
+    var(--shadow-md);
+}
+
+
+/* =========================================================
+   CARD NUMBER
+   ========================================================= */
+
+.rights-card-number {
+  position: relative;
+  z-index: 1;
+
+  flex: 0 0 auto;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 30px;
+  height: 30px;
+
+  color: var(--white);
+
+  background:
+    linear-gradient(
+      135deg,
+      var(--blue) 0%,
+      var(--blue-bright) 100%
+    );
+
+  border-radius: 8px;
+
+  font-size: 0.55rem;
+
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 16px rgba(22, 131, 200, 0.25);
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.rights-card > div {
+  position: relative;
+  z-index: 1;
+}
+
+
+.rights-card h4 {
+  margin: 1px 0 6px;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: 0.77rem;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+}
+
+
+.rights-card p {
+  margin: 0;
+
+  color: var(--grey-300);
+
+  font-size: 0.67rem;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.rights-footer {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  margin-top: 18px;
+
+  padding-top: 19px;
+
+  border-top:
+    1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.rights-footer p {
+  max-width: 720px;
+
+  margin: 0;
+
+  color: var(--grey-400);
+
+  font-size: 0.67rem;
+
+  line-height: 1.55;
+}
+
+
+/* =========================================================
+   BUTTON
+   ========================================================= */
+
+.rights-footer .btn-primary {
+  flex: 0 0 auto;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 11px;
+
+  min-height: 45px;
+
+  padding: 0 19px;
+
+  color: var(--white);
+
+  background:
+    var(--gradient-blue);
+
+  border:
+    1px solid rgba(255, 255, 255, 0.13);
+
+  border-radius: var(--radius-sm);
+
+  font-size: 0.69rem;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 24px rgba(6, 26, 47, 0.25);
+
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+
+.rights-footer .btn-primary span {
+  font-size: 1rem;
+
+  line-height: 1;
+
+  transition:
+    transform 180ms ease;
+}
+
+
+.rights-footer .btn-primary:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(6, 26, 47, 0.32);
+}
+
+
+.rights-footer .btn-primary:hover span {
+  transform: translateX(3px);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .mental-health-rights-section {
+    padding: 75px 24px;
+  }
+
+
+  .mental-health-rights-heading {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 34px;
+
+    margin-bottom: 18px;
+  }
+
+
+  .rights-content {
+    grid-template-columns: 1fr;
+  }
+
+
+  .rights-main {
+    min-height: auto;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .mental-health-rights-section {
+    padding: 55px 14px;
+  }
+
+
+  .mental-health-rights-heading {
+    gap: 18px;
+
+    padding: 25px 21px;
+
+    margin-bottom: 12px;
+
+    border-radius: 15px;
+  }
+
+
+  .mental-health-rights-heading .eyebrow {
+    margin-bottom: 13px;
+
+    font-size: 0.57rem;
+  }
+
+
+  .mental-health-rights-heading .eyebrow::before {
+    width: 20px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.35rem;
+
+    line-height: 0.96;
+  }
+
+
+  .mental-health-rights-heading > p {
+    font-size: 0.75rem;
+
+    line-height: 1.62;
+  }
+
+
+  .rights-content {
+    gap: 9px;
+  }
+
+
+  .rights-main {
+    padding: 21px;
+
+    border-radius: 15px;
+  }
+
+
+  .rights-label {
+    margin-bottom: 14px;
+
+    font-size: 0.53rem;
+  }
+
+
+  .rights-main h3 {
+    font-size: 1.28rem;
+
+    line-height: 1.12;
+  }
+
+
+  .rights-main > p {
+    font-size: 0.73rem;
+
+    line-height: 1.58;
+  }
+
+
+  .rights-statement {
+    margin-top: 19px;
+
+    padding: 14px;
+  }
+
+
+  .rights-statement p {
+    font-size: 0.69rem;
+  }
+
+
+  .rights-cards {
+    grid-template-columns: 1fr;
+
+    gap: 8px;
+  }
+
+
+  .rights-card {
+    padding: 14px;
+  }
+
+
+  .rights-card-number {
+    width: 28px;
+    height: 28px;
+  }
+
+
+  .rights-card h4 {
+    font-size: 0.75rem;
+  }
+
+
+  .rights-card p {
+    font-size: 0.64rem;
+  }
+
+
+  .rights-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 17px;
+
+    margin-top: 15px;
+
+    padding-top: 17px;
+  }
+
+
+  .rights-footer p {
+    font-size: 0.63rem;
+  }
+
+
+  .rights-footer .btn-primary {
+    width: 100%;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .mental-health-rights-section {
+    padding: 45px 10px;
+  }
+
+
+  .mental-health-rights-heading {
+    padding: 21px 17px;
+  }
+
+
+  .mental-health-rights-heading h2 {
+    font-size: 2.1rem;
+  }
+
+
+  .rights-main {
+    padding: 18px;
+  }
+
+
+  .rights-card {
+    padding: 12px;
+  }
+
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .rights-card,
+  .rights-footer .btn-primary,
+  .rights-footer .btn-primary span {
+    transition: none;
+  }
+
+}
+/* =/* =========================================================
+   GET INVOLVED SECTION
+   ========================================================= */
+
+.involvement-section {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+
+  padding: 95px 32px 105px;
+
+  box-sizing: border-box;
+
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      ellipse at 10% 15%,
+      rgba(39, 167, 232, 0.08) 0%,
+      transparent 38%
+    ),
+    radial-gradient(
+      ellipse at 90% 85%,
+      rgba(18, 62, 99, 0.08) 0%,
+      transparent 42%
+    ),
+    var(--gradient-grey);
+}
+
+
+/* =========================================================
+   BACKGROUND GLOW
+   ========================================================= */
+
+.involvement-section::before {
+  content: "";
+
+  position: absolute;
+  z-index: -1;
+
+  width: 450px;
+  height: 450px;
+
+  top: -280px;
+  right: -170px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.11),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   SECTION HEADING
+   ========================================================= */
+
+.involvement-section .section-heading {
+  width: 100%;
+  max-width: 680px;
+
+  margin: 0 auto 48px;
+
+  text-align: center;
+}
+
+
+.involvement-section .eyebrow {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  margin: 0 0 14px;
+
+  color: var(--blue);
+
+  font-size: 0.62rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.14em;
+
+  text-transform: uppercase;
+}
+
+
+.involvement-section .eyebrow::before,
+.involvement-section .eyebrow::after {
+  content: "";
+
+  width: 22px;
+  height: 2px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      var(--blue)
+    );
+}
+
+
+.involvement-section .eyebrow::after {
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      transparent
+    );
+}
+
+
+.involvement-section .section-heading h2 {
+  margin: 0 0 13px;
+
+  color: var(--navy);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(2.6rem, 5vw, 4rem);
+
+  font-weight: 700;
+
+  line-height: 0.96;
+
+  letter-spacing: -0.055em;
+}
+
+
+.involvement-section .section-heading > p:last-child {
+  max-width: 530px;
+
+  margin: 0 auto;
+
+  color: var(--ink-soft);
+
+  font-size: 0.84rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   CARD GRID
+   ========================================================= */
+
+.involvement-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 17px;
+
+  width: 100%;
+  max-width: var(--max-width);
+
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.involvement-grid article {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 350px;
+
+  padding: 31px;
+
+  box-sizing: border-box;
+
+  background:
+    linear-gradient(
+      145deg,
+      var(--grey-700) 0%,
+      var(--navy-2) 100%
+    );
+
+  border:
+    1px solid rgba(255, 255, 255, 0.10);
+
+  border-radius: var(--radius);
+
+  box-shadow:
+    var(--shadow-md);
+
+  overflow: hidden;
+
+  transition:
+    transform 220ms ease,
+    box-shadow 220ms ease,
+    border-color 220ms ease;
+}
+
+
+/* =========================================================
+   HIDE EMPTY NUMBER
+   ========================================================= */
+
+.involvement-grid .card-number {
+  display: none;
+}
+
+
+/* =========================================================
+   CARD TOP BLUE LINE
+   ========================================================= */
+
+.involvement-grid article::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--blue),
+      var(--blue-bright),
+      transparent
+    );
+
+  opacity: 0.9;
+}
+
+
+/* =========================================================
+   CARD GLOW
+   ========================================================= */
+
+.involvement-grid article::after {
+  content: "";
+
+  position: absolute;
+
+  width: 230px;
+  height: 230px;
+
+  right: -125px;
+  top: -125px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(39, 167, 232, 0.15) 0%,
+      transparent 70%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   HOVER
+   ========================================================= */
+
+.involvement-grid article:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(39, 167, 232, 0.30);
+
+  box-shadow:
+    var(--shadow-lg),
+    0 0 35px rgba(39, 167, 232, 0.06);
+}
+
+
+/* =========================================================
+   CARD TITLE
+   ========================================================= */
+
+.involvement-grid article h3 {
+  position: relative;
+  z-index: 1;
+
+  margin: 35px 0 14px;
+
+  color: var(--white);
+
+  font-family: "Manrope", sans-serif;
+
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+
+  font-weight: 700;
+
+  line-height: 1.08;
+
+  letter-spacing: -0.035em;
+}
+
+
+/* =========================================================
+   CARD DESCRIPTION
+   ========================================================= */
+
+.involvement-grid article p {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+
+  color: var(--grey-300);
+
+  font-size: 0.74rem;
+
+  line-height: 1.68;
+}
+
+
+/* =========================================================
+   CARD LINK
+   ========================================================= */
+
+.involvement-grid article a {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  width: fit-content;
+
+  margin-top: auto;
+  padding-top: 30px;
+
+  color: var(--blue-bright);
+
+  font-size: 0.70rem;
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  transition:
+    color 180ms ease;
+}
+
+
+.involvement-grid article a span {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  color: var(--white);
+
+  background:
+    rgba(39, 167, 232, 0.12);
+
+  border:
+    1px solid rgba(39, 167, 232, 0.22);
+
+  border-radius: 8px;
+
+  font-size: 0.9rem;
+
+  transition:
+    transform 180ms ease,
+    background 180ms ease;
+}
+
+
+.involvement-grid article a:hover {
+  color: var(--white);
+}
+
+
+.involvement-grid article a:hover span {
+  transform: translateX(4px);
+
+  background:
+    var(--blue);
+}
+
+
+/* =========================================================
+   DIFFERENT CARD ATMOSPHERES
+   ========================================================= */
+
+/* Story */
+.involvement-grid #story {
+  background:
+    linear-gradient(
+      145deg,
+      var(--grey-700) 0%,
+      var(--navy-2) 100%
+    );
+}
+
+
+/* Volunteer */
+.involvement-grid #volunteer {
+  background:
+    linear-gradient(
+      145deg,
+      var(--navy-2) 0%,
+      var(--navy-3) 100%
+    );
+}
+
+
+/* Donate */
+.involvement-grid #donate {
+  background:
+    linear-gradient(
+      145deg,
+      var(--navy-3) 0%,
+      var(--blue) 100%
+    );
+}
+
+
+/* Donate text slightly brighter */
+.involvement-grid #donate p {
+  color: var(--blue-soft);
+}
+
+
+.involvement-grid #donate a {
+  color: var(--white);
+}
+
+
+.involvement-grid #donate a span {
+  background:
+    rgba(255, 255, 255, 0.13);
+
+  border-color:
+    rgba(255, 255, 255, 0.18);
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .involvement-section {
+    padding: 75px 24px 85px;
+  }
+
+
+  .involvement-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+
+  .involvement-grid article:last-child {
+    grid-column: 1 / -1;
+
+    width: calc(50% - 8px);
+
+    justify-self: center;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+  .involvement-section {
+    padding: 60px 15px 70px;
+  }
+
+
+  .involvement-section .section-heading {
+    margin-bottom: 31px;
+  }
+
+
+  .involvement-section .eyebrow {
+    font-size: 0.57rem;
+  }
+
+
+  .involvement-section .section-heading h2 {
+    font-size: 2.4rem;
+  }
+
+
+  .involvement-section .section-heading > p:last-child {
+    font-size: 0.75rem;
+
+    line-height: 1.6;
+  }
+
+
+  .involvement-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+
+  .involvement-grid article {
+    width: 100% !important;
+
+    min-height: 290px;
+
+    padding: 24px;
+
+    border-radius: 15px;
+  }
+
+
+  .involvement-grid article:last-child {
+    grid-column: auto;
+  }
+
+
+  .involvement-grid article h3 {
+    margin-top: 32px;
+
+    font-size: 1.30rem;
+  }
+
+
+  .involvement-grid article p {
+    font-size: 0.70rem;
+
+    line-height: 1.62;
+  }
+
+
+  .involvement-grid article a {
+    padding-top: 25px;
+
+    font-size: 0.66rem;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 380px) {
+
+  .involvement-section {
+    padding: 48px 11px 58px;
+  }
+
+
+  .involvement-section .section-heading h2 {
+    font-size: 2.15rem;
+  }
+
+
+  .involvement-grid article {
+    min-height: 275px;
+
+    padding: 20px;
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .involvement-grid article,
+  .involvement-grid article a,
+  .involvement-grid article a span {
+    transition: none;
+  }
+
+}
+/* =========================================================
+RESEARCH & LEARNING
+========================================================= */
+
+.research-section {
+position: relative;
+width: 100%;
+box-sizing: border-box;
+overflow: hidden;
+
+padding: 100px 24px 110px;
+
+background:
+radial-gradient(
+ellipse at 8% 5%,
+rgba(39, 167, 232, 0.10) 0%,
+transparent 34%
+),
+radial-gradient(
+ellipse at 92% 90%,
+rgba(18, 62, 99, 0.08) 0%,
+transparent 36%
+),
+var(--gradient-grey);
+}
+
+/* =========================================================
+INNER WIDTH
+========================================================= */
+
+.research-section::before {
+content: "";
+
+position: absolute;
+width: 420px;
+height: 420px;
+
+top: -220px;
+right: -160px;
+
+background:
+radial-gradient(
+circle,
+rgba(39, 167, 232, 0.08),
+transparent 68%
+);
+
+pointer-events: none;
+}
+
+.research-heading,
+.research-grid {
+position: relative;
+z-index: 1;
+
+width: 100%;
+max-width: var(--max-width);
+
+margin-left: auto;
+margin-right: auto;
+}
+
+/* =========================================================
+SECTION HEADING
+========================================================= */
+
+.research-heading {
+display: grid;
+
+grid-template-columns:
+minmax(0, 0.9fr)
+minmax(0, 1fr);
+
+gap: 70px;
+
+align-items: end;
+
+margin-bottom: 48px;
+}
+
+.research-heading > div {
+min-width: 0;
+}
+
+.research-heading .eyebrow {
+margin: 0 0 14px;
+
+color: var(--blue);
+
+font-size: 0.65rem;
+font-weight: 800;
+
+letter-spacing: 0.12em;
+
+text-transform: uppercase;
+}
+
+.research-heading h2 {
+margin: 0;
+
+color: var(--navy);
+
+font-family: "Manrope", sans-serif;
+
+font-size: clamp(2.7rem, 5vw, 4.5rem);
+
+line-height: 0.95;
+
+letter-spacing: -0.055em;
+}
+
+.research-heading > p {
+max-width: 600px;
+
+margin: 0;
+
+color: var(--ink-soft);
+
+font-size: 0.9rem;
+
+line-height: 1.75;
+}
+
+/* =========================================================
+RESEARCH CARDS
+========================================================= */
+
+.research-grid {
+display: grid;
+
+grid-template-columns:
+repeat(2, minmax(0, 1fr));
+
+gap: 20px;
+}
+
+/* =========================================================
+INDIVIDUAL CARD
+========================================================= */
+
+.research-grid article {
+position: relative;
+
+min-height: 310px;
+
+padding: 34px;
+
+box-sizing: border-box;
+
+display: flex;
+flex-direction: column;
+
+overflow: hidden;
+
+background:
+radial-gradient(
+circle at 100% 0%,
+rgba(39, 167, 232, 0.16),
+transparent 34%
+),
+linear-gradient(
+145deg,
+var(--navy-2) 0%,
+var(--navy-3) 52%,
+var(--navy-2) 100%
+);
+
+border:
+1px solid rgba(255, 255, 255, 0.10);
+
+border-radius: var(--radius);
+
+box-shadow:
+var(--shadow-md);
+
+transition:
+transform 0.3s ease,
+box-shadow 0.3s ease,
+border-color 0.3s ease;
+}
+
+.research-grid article:hover {
+transform: translateY(-5px);
+
+border-color:
+rgba(39, 167, 232, 0.28);
+
+box-shadow:
+var(--shadow-lg);
+}
+
+/* =========================================================
+DECORATIVE GLOW
+========================================================= */
+
+.research-grid article::before {
+content: "";
+
+position: absolute;
+
+width: 190px;
+height: 190px;
+
+right: -90px;
+bottom: -100px;
+
+background:
+radial-gradient(
+circle,
+rgba(39, 167, 232, 0.12),
+transparent 68%
+);
+
+pointer-events: none;
+}
+
+/* =========================================================
+CARD ACCENT
+========================================================= */
+
+.research-card-accent {
+display: block;
+
+width: 42px;
+height: 4px;
+
+margin-bottom: 30px;
+
+background:
+linear-gradient(
+90deg,
+var(--blue),
+var(--blue-bright)
+);
+
+border-radius: 999px;
+}
+
+/* =========================================================
+CARD HEADING
+========================================================= */
+
+.research-grid article h3 {
+position: relative;
+z-index: 1;
+
+margin: 0 0 15px;
+
+color: var(--white);
+
+font-family: "Manrope", sans-serif;
+
+font-size: clamp(1.45rem, 2.5vw, 2rem);
+
+line-height: 1.1;
+
+letter-spacing: -0.03em;
+}
+
+/* =========================================================
+CARD TEXT
+========================================================= */
+
+.research-grid article p {
+position: relative;
+z-index: 1;
+
+max-width: 570px;
+
+margin: 0 0 12px;
+
+color:
+rgba(255, 255, 255, 0.72);
+
+font-size: 0.78rem;
+
+line-height: 1.65;
+}
+
+/* =========================================================
+RESEARCH LINK
+========================================================= */
+
+.research-link {
+position: relative;
+z-index: 2;
+
+display: inline-flex;
+
+align-items: center;
+
+gap: 10px;
+
+width: fit-content;
+
+margin-top: auto;
+padding-top: 20px;
+
+color: var(--blue-bright);
+
+font-size: 0.72rem;
+
+font-weight: 800;
+
+text-decoration: none;
+
+transition:
+color 0.25s ease,
+gap 0.25s ease;
+}
+
+.research-link span {
+font-size: 1rem;
+
+line-height: 1;
+
+transition:
+transform 0.25s ease;
+}
+
+.research-link:hover {
+color: var(--white);
+
+gap: 14px;
+}
+
+.research-link:hover span {
+transform: translateX(3px);
+}
+
+/* =========================================================
+SECOND CARD — SLIGHTLY DIFFERENT TONE
+========================================================= */
+
+.research-grid article:nth-child(2) {
+background:
+radial-gradient(
+circle at 90% 10%,
+rgba(22, 131, 200, 0.13),
+transparent 35%
+),
+linear-gradient(
+145deg,
+#344253 0%,
+var(--navy-2) 65%,
+var(--navy) 100%
+);
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+.research-section {
+padding: 80px 20px 90px;
+}
+
+.research-heading {
+grid-template-columns: 1fr;
+
+gap: 20px;
+
+margin-bottom: 38px;
+
+
+}
+
+.research-heading > p {
+max-width: 680px;
+}
+
+.research-grid {
+grid-template-columns: 1fr;
+}
+
+.research-grid article {
+min-height: 280px;
+}
+
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+.research-section {
+padding: 65px 14px 75px;
+}
+
+.research-heading {
+gap: 16px;
+
+margin-bottom: 28px;
+
+
+}
+
+.research-heading .eyebrow {
+margin-bottom: 11px;
+
+font-size: 0.58rem;
+
+
+}
+
+.research-heading h2 {
+font-size: 2.45rem;
+}
+
+.research-heading > p {
+font-size: 0.76rem;
+
+line-height: 1.6;
+
+
+}
+
+.research-grid {
+gap: 12px;
+}
+
+.research-grid article {
+min-height: 0;
+
+padding: 24px;
+
+border-radius: 15px;
+
+
+}
+
+.research-card-accent {
+width: 34px;
+height: 3px;
+
+margin-bottom: 23px;
+
+
+}
+
+.research-grid article h3 {
+margin-bottom: 12px;
+
+font-size: 1.35rem;
+
+
+}
+
+.research-grid article p {
+font-size: 0.72rem;
+
+line-height: 1.6;
+
+
+}
+
+.research-link {
+padding-top: 16px;
+
+font-size: 0.68rem;
+
+
+}
+
+}
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+.research-section {
+padding: 55px 10px 65px;
+}
+
+.research-heading h2 {
+font-size: 2.15rem;
+}
+
+.research-grid article {
+padding: 20px;
+
+border-radius: 13px;
+
+
+}
+
+.research-grid article h3 {
+font-size: 1.25rem;
+}
+
+.research-grid article p {
+font-size: 0.68rem;
+}
+
+}
