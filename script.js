@@ -747,3 +747,268 @@ else {
 
 
 });
+/* =========================================================
+   ADVOCONNECT SINGLE SECTION NAVIGATION
+========================================================= */
+
+/*
+   These are the main pages/sections of the website.
+
+   Each one is already a .page-section in your HTML.
+*/
+
+const singlePageSections = [
+  "home",
+  "what-we-do",
+  "mission",
+  "vision",
+  "objectives",
+  "services",
+  "mental-health-act",
+  "involved",
+  "research",
+  "team",
+  "funders",
+  "contact-us",
+  "referral-form",
+  "complaint",
+  "story-form",
+  "volunteer-form",
+  "donate-form"
+];
+
+
+/* =========================================================
+   SHOW SECTION
+========================================================= */
+
+function showSingleSection(sectionId, updateHistory = true) {
+
+  const targetSection = document.getElementById(sectionId);
+
+  if (!targetSection) {
+    console.warn("Section not found:", sectionId);
+    return;
+  }
+
+
+  /*
+     Hide every main page section
+  */
+
+  document.querySelectorAll("main > .page-section").forEach(section => {
+
+    section.classList.remove("single-page-visible");
+
+    section.classList.add("single-page-hidden");
+
+  });
+
+
+  /*
+     Show the selected section
+  */
+
+  targetSection.classList.remove("single-page-hidden");
+
+  targetSection.classList.add("single-page-visible");
+
+
+  /*
+     Update browser URL
+  */
+
+  if (updateHistory) {
+
+    history.pushState(
+      {
+        section: sectionId
+      },
+      "",
+      "#" + sectionId
+    );
+
+  }
+
+
+  /*
+     Always return to the top
+  */
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+
+  /*
+     Close mobile navigation if it exists
+  */
+
+  closeMobileNavigation();
+
+
+  /*
+     Close any open dropdown menus
+  */
+
+  closeDropdowns();
+
+}
+
+
+/* =========================================================
+   NAVIGATION LINKS
+========================================================= */
+
+document.addEventListener("click", function(event) {
+
+  const link = event.target.closest('a[href^="#"]');
+
+  if (!link) {
+    return;
+  }
+
+
+  const href = link.getAttribute("href");
+
+  if (!href || href === "#") {
+    return;
+  }
+
+
+  const sectionId = href.substring(1);
+
+
+  /*
+     Only intercept links that point to one
+     of our main sections.
+  */
+
+  if (!singlePageSections.includes(sectionId)) {
+    return;
+  }
+
+
+  event.preventDefault();
+
+  showSingleSection(sectionId);
+
+});
+
+
+/* =========================================================
+   INITIAL PAGE
+========================================================= */
+
+function initialiseSinglePageNavigation() {
+
+  let sectionId = window.location.hash.substring(1);
+
+
+  /*
+     If URL contains a valid section, open it.
+     Otherwise open Home.
+  */
+
+  if (!singlePageSections.includes(sectionId)) {
+
+    sectionId = "home";
+
+  }
+
+
+  showSingleSection(sectionId, false);
+
+}
+
+
+/* =========================================================
+   BROWSER BACK / FORWARD
+========================================================= */
+
+window.addEventListener("popstate", function() {
+
+  let sectionId = window.location.hash.substring(1);
+
+
+  if (!singlePageSections.includes(sectionId)) {
+
+    sectionId = "home";
+
+  }
+
+
+  showSingleSection(sectionId, false);
+
+});
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function closeMobileNavigation() {
+
+  const menu = document.getElementById("primary-navigation");
+
+  const menuButton =
+    document.querySelector(".menu-toggle");
+
+
+  if (menu) {
+
+    menu.classList.remove("open");
+
+  }
+
+
+  if (menuButton) {
+
+    menuButton.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+  }
+
+}
+
+
+/* =========================================================
+   DROPDOWN MENUS
+========================================================= */
+
+function closeDropdowns() {
+
+  document
+    .querySelectorAll(".dropdown")
+    .forEach(dropdown => {
+
+      dropdown.classList.remove("open");
+
+      const button =
+        dropdown.querySelector(".drop-btn");
+
+      if (button) {
+
+        button.setAttribute(
+          "aria-expanded",
+          "false"
+        );
+
+      }
+
+    });
+
+}
+
+
+/* =========================================================
+   START
+========================================================= */
+
+document.addEventListener(
+  "DOMContentLoaded",
+  initialiseSinglePageNavigation
+);
