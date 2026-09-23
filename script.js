@@ -149,116 +149,106 @@ if (shouldScroll) {
 
 /* =====================================================
 NAVIGATION LINKS
+===================================================== *//* =====================================================
+SECTION NAVIGATION
 ===================================================== */
+
+const allSections = document.querySelectorAll("main > section");
+
+/*
+  These are the destinations that should behave as
+  individual pages/views.
+*/
+const pageIds = [
+  "home",
+  "what-we-do",
+  "mission",
+  "vision",
+  "objectives",
+  "services",
+  "mental-health",
+  "rights",
+  "mental-health-act",
+  "outreach",
+  "involved",
+  "research",
+  "team",
+  "funders",
+  "contact-us",
+  "referral-form",
+  "complaint",
+  "story-form",
+  "volunteer-form",
+  "donate-form"
+];
+
+
 /* =====================================================
-NAVIGATION LINKS + SECTION SWITCHING
+SHOW ONE SECTION
 ===================================================== */
 
-const pageSections =
-  document.querySelectorAll(".page-section");
+function showPageSection(id, shouldScroll = true) {
 
-
-function showPageSection(hash) {
-
-  /* -----------------------------------------------
-     HIDE ALL SECTIONS
-  ------------------------------------------------ */
-
-  pageSections.forEach(section => {
-
+  /* Hide every main section */
+  allSections.forEach(section => {
     section.classList.remove("active");
-
   });
 
 
-  /* -----------------------------------------------
-     NOTHING SELECTED
-  ------------------------------------------------ */
+  /* Find requested section */
+  const target = document.getElementById(id);
 
-  if (
-    !hash ||
-    hash === "#"
-  ) {
+  if (!target) {
+    console.warn("Section not found:", id);
     return;
   }
 
 
-  /* -----------------------------------------------
-     FIND SELECTED SECTION
-  ------------------------------------------------ */
+  /*
+    If the ID belongs to a card/article inside another
+    section, show that parent section for now.
+  */
+  const parentSection = target.closest("main > section");
 
-  const target =
-    document.querySelector(hash);
-
-
-  /* -----------------------------------------------
-     MAKE SURE TARGET IS A PAGE SECTION
-  ------------------------------------------------ */
-
-  if (
-    !target ||
-    !target.classList.contains("page-section")
-  ) {
-    return;
+  if (parentSection) {
+    parentSection.classList.add("active");
+  } else {
+    target.classList.add("active");
   }
 
 
-  /* -----------------------------------------------
-     SHOW ONLY SELECTED SECTION
-  ------------------------------------------------ */
-
-  target.classList.add("active");
-
-
-  /* -----------------------------------------------
-     START AT TOP
-  ------------------------------------------------ */
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
-
+  /* Scroll to top */
+  if (shouldScroll) {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }
 }
 
 
 /* =====================================================
-NAVIGATION LINKS
+ALL NAVIGATION LINKS
 ===================================================== */
 
-document
-.querySelectorAll(
-  ".dropdown-menu a, .nav-menu > li > a"
-)
-.forEach(link => {
+document.querySelectorAll("a[href^='#']").forEach(link => {
 
   link.addEventListener("click", event => {
 
-    const targetId =
-      link.getAttribute("href");
+    const hash = link.getAttribute("href");
 
-
-    /* ---------------------------------------------
-       IGNORE EXTERNAL LINKS
-    ---------------------------------------------- */
-
-    if (
-      !targetId ||
-      targetId === "#" ||
-      !targetId.startsWith("#")
-    ) {
+    if (!hash || hash === "#") {
       return;
     }
 
 
-    const target =
-      document.querySelector(targetId);
+    const id = hash.substring(1);
 
+    const target = document.getElementById(id);
 
-    /* ---------------------------------------------
-       TARGET DOES NOT EXIST
-    ---------------------------------------------- */
-
+    /*
+      If the target doesn't exist, leave the link alone.
+    */
     if (!target) {
       return;
     }
@@ -267,106 +257,37 @@ document
     event.preventDefault();
 
 
-    /* ---------------------------------------------
-       CLOSE DROPDOWNS
-    ---------------------------------------------- */
-
+    /* Close dropdown menus */
     closeAllDropdowns();
 
 
-    /* ---------------------------------------------
-       CLOSE MOBILE MENU
-    ---------------------------------------------- */
-
+    /* Close mobile navigation */
     if (navMenu) {
-
       navMenu.classList.remove("open");
-
     }
 
     if (menuToggle) {
-
       menuToggle.setAttribute(
         "aria-expanded",
         "false"
       );
-
     }
 
 
-    /* ---------------------------------------------
-       UPDATE URL
-    ---------------------------------------------- */
-
+    /* Update browser URL */
     history.pushState(
       null,
       "",
-      targetId
+      hash
     );
 
 
-    /* ---------------------------------------------
-       FORM PAGE
-    ---------------------------------------------- */
-
-    if (
-      target.classList.contains("form-page")
-    ) {
-
-      showFormPage(
-        targetId,
-        true
-      );
-
-      return;
-    }
-
-
-    /* ---------------------------------------------
-       NORMAL PAGE SECTION
-    ---------------------------------------------- */
-
-    if (
-      target.classList.contains("page-section")
-    ) {
-
-      showPageSection(
-        targetId
-      );
-
-      return;
-    }
-
-
-    /* ---------------------------------------------
-       FALLBACK
-       For anything that isn't a page-section
-    ---------------------------------------------- */
-
-    const header =
-      document.querySelector(".site-header");
-
-    const headerHeight =
-      header ? header.offsetHeight : 0;
-
-    const targetPosition =
-      target.getBoundingClientRect().top +
-      window.scrollY -
-      headerHeight -
-      15;
-
-    window.scrollTo({
-
-      top: targetPosition,
-
-      behavior: "smooth"
-
-    });
+    /* Show selected section */
+    showPageSection(id);
 
   });
 
 });
-
 /* =====================================================
 ESCAPE KEY
 ===================================================== */
