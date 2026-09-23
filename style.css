@@ -10271,3 +10271,27 @@ font-size: 0.68rem;
 .page-section.active {
   display: block;
 }
+/* =========================================================
+   SINGLE SECTION WEBSITE
+========================================================= */
+
+/* Hide sections when they are not selected */
+.page-section.single-page-hidden {
+  display: none !important;
+}
+
+/* Show the selected section */
+.page-section.single-page-visible {
+  display: block !important;
+}
+
+/* Prevent hidden sections from affecting page layout */
+.page-section.single-page-hidden {
+  visibility: hidden;
+  height: 0 !important;
+  min-height: 0 !important;
+  overflow: hidden !important;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
