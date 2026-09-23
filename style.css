@@ -2850,11 +2850,13 @@ a {
   .nav-menu {
     position: absolute;
 
+    flex-direction: column;
+
     top: 68px;
-    left: 0;
+    
     right: 0;
 
-    width: 100%;
+    width: 50%;
 
     display: none;
 
@@ -3501,10 +3503,10 @@ a {
     position: absolute;
 
     top: 68px;
-    left: 0;
+    
     right: 0;
 
-    width: 100%;
+    width: 50%;
 
     display: none;
 
@@ -3683,6 +3685,18 @@ a {
 
   .nav-menu {
     top: 64px;
+
+    display: none;
+
+    position: absolute;
+    
+    right: 0;
+
+    width: 50%;
+
+    z-index: 99999;
+
+    flex-direction: column;
 
     padding: 8px 12px 14px;
   }
