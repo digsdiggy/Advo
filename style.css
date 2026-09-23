@@ -10264,3 +10264,10 @@ font-size: 0.68rem;
 }
 
 }
+.page-section {
+  display: none;
+}
+
+.page-section.active {
+  display: block;
+}
